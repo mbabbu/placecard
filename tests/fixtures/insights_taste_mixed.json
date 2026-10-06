@@ -1,0 +1,175 @@
+{
+ "success": true,
+ "results": {
+  "tags": [
+   {
+    "tag_id": "urn:tag:archetype:qloo:the_power_of_music",
+    "name": "The Power Of Music",
+    "types": [
+     "urn:entity:movie",
+     "urn:entity:tv_show"
+    ],
+    "subtype": "urn:tag:archetype:qloo",
+    "tag_value": "urn:tag:archetype:qloo:the_power_of_music",
+    "popularity": 0.9880282841731879,
+    "query": {
+     "affinity": 1
+    }
+   },
+   {
+    "tag_id": "urn:tag:specialty_dish:place:scallop_risotto",
+    "name": "Scallop Risotto",
+    "types": [
+     "urn:entity:place"
+    ],
+    "subtype": "urn:tag:specialty_dish:place",
+    "tag_value": "urn:tag:specialty_dish:place:scallop_risotto",
+    "popularity": 0.944198701751801,
+    "query": {
+     "affinity": 1
+    }
+   },
+   {
+    "tag_id": "urn:tag:style:qloo:lyric_driven",
+    "name": "Lyric Driven",
+    "types": [
+     "urn:entity:artist",
+     "urn:entity:movie",
+     "urn:entity:tv_show"
+    ],
+    "subtype": "urn:tag:style:qloo",
+    "tag_value": "urn:tag:style:qloo:lyric_driven",
+    "popularity": 0.9985943210791517,
+    "query": {
+     "affinity": 0.9998839329506864
+    }
+   },
+   {
+    "tag_id": "urn:tag:genre:music:k_pop",
+    "name": "k pop",
+    "types": [
+     "urn:entity:artist"
+    ],
+    "subtype": "urn:tag:genre:music",
+    "tag_value": "urn:tag:genre:music:k_pop",
+    "popularity": 0.9985351784168397,
+    "query": {
+     "affinity": 0.9989379595404664
+    }
+   },
+   {
+    "tag_id": "urn:tag:character:qloo:vibrant",
+    "name": "Vibrant",
+    "types": [
+     "urn:entity:book",
+     "urn:entity:movie",
+     "urn:entity:tv_show"
+    ],
+    "subtype": "urn:tag:character:qloo",
+    "tag_value": "urn:tag:character:qloo:vibrant",
+    "popularity": 0.9926170635927353,
+    "query": {
+     "affinity": 0.9986242739223479
+    }
+   },
+   {
+    "tag_id": "urn:tag:subgenre:qloo:live_performance",
+    "name": "Live Performance",
+    "types": [
+     "urn:entity:movie",
+     "urn:entity:artist",
+     "urn:entity:tv_show",
+     "urn:entity:podcast",
+     "urn:entity:book"
+    ],
+    "subtype": "urn:tag:subgenre:qloo",
+    "tag_value": "urn:tag:subgenre:qloo:live_performance",
+    "popularity": 0.9985357282158254,
+    "query": {
+     "affinity": 0.9985766942812306
+    }
+   },
+   {
+    "tag_id": "urn:tag:subgenre:qloo:k_pop",
+    "name": "K Pop",
+    "types": [
+     "urn:entity:artist",
+     "urn:entity:book",
+     "urn:entity:movie",
+     "urn:entity:tv_show",
+     "urn:entity:podcast"
+    ],
+    "subtype": "urn:tag:subgenre:qloo",
+    "tag_value": "urn:tag:subgenre:qloo:k_pop",
+    "popularity": 0.9922436715387758,
+    "query": {
+     "affinity": 0.9984230955846677
+    }
+   },
+   {
+    "tag_id": "urn:tag:genre:music:kpop",
+    "name": "Kpop",
+    "types": [
+     "urn:entity:artist"
+    ],
+    "subtype": "urn:tag:genre:music",
+    "tag_value": "urn:tag:genre:music:kpop",
+    "popularity": 0.9977459812443145,
+    "query": {
+     "affinity": 0.9983890027135648
+    }
+   },
+   {
+    "tag_id": "urn:tag:style:qloo:meticulous",
+    "name": "Meticulous",
+    "types": [
+     "urn:entity:book",
+     "urn:entity:artist",
+     "urn:entity:movie",
+     "urn:entity:tv_show",
+     "urn:entity:podcast"
+    ],
+    "subtype": "urn:tag:style:qloo",
+    "tag_value": "urn:tag:style:qloo:meticulous",
+    "popularity": 0.9969467306046234,
+    "query": {
+     "affinity": 0.9983047388826973
+    }
+   },
+   {
+    "tag_id": "urn:tag:keyword:qloo:world_tour",
+    "name": "World Tour",
+    "types": [
+     "urn:entity:tv_show",
+     "urn:entity:writer",
+     "urn:entity:director",
+     "urn:entity:book",
+     "urn:entity:author",
+     "urn:entity:tv_episode",
+     "urn:entity:actor",
+     "urn:entity:movie"
+    ],
+    "subtype": "urn:tag:keyword:qloo",
+    "tag_value": "urn:tag:keyword:qloo:world_tour",
+    "popularity": 0.9863799601544804,
+    "query": {
+     "affinity": 0.9979786312445856
+    }
+   },
+   {
+    "tag_id": "urn:tag:genre:place:restaurant:malaysian",
+    "name": "Malaysian",
+    "types": [
+     "urn:entity:place"
+    ],
+    "subtype": "urn:tag:genre:place",
+    "tag_value": "urn:tag:genre:place:restaurant:malaysian",
+    "popularity": 0.9994864877474154,
+    "query": {
+     "affinity": 0.9969199178644764
+    }
+   }
+  ]
+ },
+ "duration": null
+}

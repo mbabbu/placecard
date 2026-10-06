@@ -1,0 +1,3 @@
+# Runtime dependencies. The app itself is Python standard library only;
+# the Anthropic SDK is needed only when LLM_PROVIDER=anthropic (Gemini uses plain HTTPS).
+anthropic>=1.11,<2

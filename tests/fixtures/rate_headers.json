@@ -1,0 +1,8 @@
+{
+ "X-Second-RateLimit-Limit": "5",
+ "X-Second-RateLimit-Remaining": "4",
+ "X-Second-RateLimit-Reset": "1",
+ "X-Month-RateLimit-Limit": "10000",
+ "X-Month-RateLimit-Remaining": "9603",
+ "X-Month-RateLimit-Reset": "2590950.2"
+}

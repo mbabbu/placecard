@@ -1,0 +1,101 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Placecard</title>
+<meta name="description" content="An AI agent that uses Qloo's taste graph to seat dinners, weddings and conference tables so nobody sits with only strangers.">
+<link rel="icon" href="/favicon.svg" type="image/svg+xml">
+<link rel="stylesheet" href="/style.css">
+</head>
+<body>
+<header class="top">
+  <div class="wrap top-in">
+    <a class="brand" href="/" aria-label="Placecard home">
+      <svg viewBox="0 0 32 32" width="30" height="30" aria-hidden="true"><rect x="3" y="7" width="26" height="18" rx="4" fill="var(--accent)"/><path d="M3 11h26" stroke="var(--on-accent)" stroke-width="1.6" opacity=".55"/><circle cx="16" cy="18" r="3.4" fill="var(--on-accent)"/><path d="M16 21.4v3.2" stroke="var(--on-accent)" stroke-width="2" stroke-linecap="round"/></svg>
+      <span>Placecard</span>
+    </a>
+    <div class="pills" id="modes" aria-live="polite"></div>
+  </div>
+</header>
+
+<main class="wrap">
+  <section class="hero">
+    <h1>Seat every table with people who will actually talk.</h1>
+    <p class="lede">Paste your guest list with each person's favourites. An AI agent reads everyone's taste through <strong>Qloo's cultural taste graph</strong>, seats the room so each table shares real common ground and <em>nobody is stuck with only strangers</em>, honours your requirements, and writes a conversation-starter card for every table.</p>
+  </section>
+  <div id="sample-banner" class="banner" hidden>
+    <strong>SAMPLE DATA.</strong> No Qloo key is configured on this server, so favourites resolve against a small hand-written catalogue and taste vectors are computed from hand-written tags, not from Qloo. Everything else (the agent loop, the optimiser, the map) is the real thing.
+  </div>
+
+  <div class="grid">
+    <form id="form" class="panel" autocomplete="off">
+      <div class="panel-head">
+        <h2><span class="num">1</span> Who is coming?</h2>
+        <div class="presets" role="group" aria-label="Sample guest lists">
+          <button type="button" class="chip-btn" data-preset="wedding">Sample wedding (40)</button>
+          <button type="button" class="chip-btn" data-preset="conference">Conference dinner (24)</button>
+          <button type="button" class="chip-btn" data-preset="mystery">Mystery guests (6)</button>
+        </div>
+      </div>
+      <p class="hint">One guest per line: <code>Name: favourite; favourite; favourite [Group]</code>, or CSV with columns <code>name, favourites, group</code> (favourites separated by <code>;</code>). 2 to 4 favourites each, from any domain: films, music, books, games, restaurants, shows. Add a hint such as <code>Hades (game)</code> or <code>Dune (book)</code> when a name could mean several things. Up to <span id="max-guests">120</span> guests.</p>
+      <label class="field"><span>Guest list</span>
+        <textarea id="guests" rows="9" spellcheck="false" placeholder="Mei Tan: Parasite; BTS; Jalan Alor Food Street [Tan family]&#10;Aiman: Spirited Away; Khruangbin; Utada Hikaru [Friends]"></textarea>
+      </label>
+      <div class="upload-row">
+        <label class="chip-btn file-btn">Upload CSV
+          <input type="file" id="file" accept=".csv,.txt,text/csv,text/plain" hidden>
+        </label>
+        <span id="parse-info" class="meta" aria-live="polite"></span>
+      </div>
+      <p id="parse-warn" class="warn-text" hidden></p>
+
+      <h2><span class="num">2</span> Requirements</h2>
+      <label class="field"><span>In plain words, one per line (optional)</span>
+        <textarea id="constraints" rows="4" spellcheck="false" placeholder="Keep the Tan family together.&#10;Dave and Ali apart.&#10;Put Grandma Rose at the head table.&#10;Put Priya on table 3."></textarea>
+      </label>
+      <div class="row2">
+        <label class="field"><span>Seats per table</span>
+          <select id="table-size" aria-describedby="size-hint">
+            <option>4</option><option>5</option><option>6</option><option>7</option><option selected>8</option>
+            <option>9</option><option>10</option><option>12</option>
+          </select>
+        </label>
+        <p class="hint" id="size-hint" style="align-self:end">Tables are balanced: sizes differ by at most one.</p>
+      </div>
+      <button type="submit" id="go" class="primary">Seat my guests</button>
+      <p id="form-error" class="error" role="alert" hidden></p>
+    </form>
+
+    <section class="panel agent" aria-labelledby="agent-h">
+      <div class="panel-head">
+        <h2 id="agent-h"><span class="num">3</span> The agent at work</h2>
+        <span id="status" class="status idle">Waiting</span>
+      </div>
+      <ol id="timeline" class="timeline" aria-live="polite">
+        <li class="empty">When you press <b>Seat my guests</b>, each step the agent takes shows up here: building taste profiles from Qloo, validating your requirements, running the optimiser, and writing the table cards.</li>
+      </ol>
+      <div id="stats" class="stats" hidden></div>
+    </section>
+  </div>
+
+  <section id="question" class="panel question" hidden aria-live="assertive"></section>
+  <section id="plan" class="plan" hidden aria-live="polite"></section>
+
+  <details class="panel how">
+    <summary><h2>How it works</h2></summary>
+    <div class="how-grid">
+      <div><h3>Taste profiles from Qloo</h3><p>Each guest's favourites are resolved with Qloo <code>/search</code>. One taste-analysis call per guest (<code>/v2/insights</code> with <code>filter.type=urn:tag</code>) returns the tags that characterise them: a tag-affinity vector. Names are never sent to Qloo.</p></div>
+      <div><h3>An optimiser, not a guess</h3><p>Pairwise compatibility is the cosine of idf-weighted tag vectors. Tables are filled to maximise the fit of the <em>least</em>-matched guest and the average table cohesion, with a swap local search, while your requirements (together, apart, fixed table, head table) stay hard constraints.</p></div>
+      <div><h3>An agent in charge</h3><p>An LLM (Claude or Gemini) calls seven tools: <code>build_taste_profiles</code>, <code>apply_constraint</code>, <code>seat_guests</code>, <code>explain_table</code>, <code>table_card</code>, <code>ask_organizer</code>, <code>present_plan</code>. It turns your wording into validated constraints and can ask you a question.</p></div>
+      <div><h3>Cards you can trust</h3><p>A table card may only name tags the table shares in Qloo and favourites its guests listed. The server rejects any card that mentions anything else. Affinities describe aggregate taste patterns, not facts about a person.</p></div>
+    </div>
+  </details>
+</main>
+
+<footer class="wrap foot">
+  <span>Built for the Qloo Agentic Hackathon. Taste data from Qloo. Open source (MIT).</span>
+</footer>
+<script src="/app.js"></script>
+</body>
+</html>

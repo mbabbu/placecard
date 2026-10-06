@@ -1,0 +1,8 @@
+{
+ "error": {
+  "reason": "Bad Request",
+  "message": "types/0:  must be equal to one of the allowed values: urn:entity:actor, urn:entity:album, urn:entity:artist, urn:entity:author, urn:entity:book, urn:entity:brand, urn:entity:destination, urn:entity:director, urn:entity:locality, urn:entity:movie, urn:entity:person, urn:entity:place, urn:entity:podcast, urn:entity:tv_show, urn:entity:videogame, urn:demographics, urn:tag",
+  "code": 400,
+  "request_id": "96562954-9618-4c73-9607-ead9068c9dca"
+ }
+}

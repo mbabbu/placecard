@@ -1,0 +1,209 @@
+{
+ "results": [
+  {
+   "name": "Parasite",
+   "entity_id": "A499EC25-7FF6-46DE-9DA5-3E78E99B9E26",
+   "types": [
+    "urn:entity:movie"
+   ],
+   "properties": {
+    "content_rating": "R",
+    "release_year": 2019,
+    "release_country": "South Korea",
+    "release_date": "2019-11-08",
+    "production_company": "Barunson E&A",
+    "description": "Parasite (2019), directed by Bong Joon-ho and starring Song Kang-ho, Lee Sun-kyun, and Cho Yeo-jeong, is a genre-blending drama-thriller with strong satirical o",
+    "image": {
+     "url": "https://images.qloo.com/i/A499EC25-7FF6-46DE-9DA5-3E78E99B9E26-420x-auto.jpg"
+    }
+   },
+   "popularity": 0.9999028056761485,
+   "disambiguation": "2019",
+   "tags": [
+    {
+     "name": "Privilege",
+     "tag_id": "urn:tag:theme:qloo:privilege",
+     "type": "urn:tag:theme:qloo"
+    },
+    {
+     "name": "Reading someone elses diary",
+     "tag_id": "urn:tag:keyword:media:reading_someone_elses_diary",
+     "type": "urn:tag:keyword:media"
+    },
+    {
+     "name": "Smell",
+     "tag_id": "urn:tag:keyword:media:smell",
+     "type": "urn:tag:keyword:media"
+    },
+    {
+     "name": "Moody",
+     "tag_id": "urn:tag:style:qloo:moody",
+     "type": "urn:tag:style:qloo"
+    },
+    {
+     "name": "Fumigation",
+     "tag_id": "urn:tag:keyword:media:fumigation",
+     "type": "urn:tag:keyword:media"
+    },
+    {
+     "name": "Toy bow and arrow",
+     "tag_id": "urn:tag:keyword:media:toy_bow_and_arrow",
+     "type": "urn:tag:keyword:media"
+    },
+    {
+     "name": "Head injury",
+     "tag_id": "urn:tag:keyword:media:head_injury",
+     "type": "urn:tag:keyword:media"
+    },
+    {
+     "name": "Flood",
+     "tag_id": "urn:tag:keyword:media:flood",
+     "type": "urn:tag:keyword:media"
+    },
+    {
+     "name": "Bunker",
+     "tag_id": "urn:tag:keyword:media:bunker",
+     "type": "urn:tag:keyword:media"
+    },
+    {
+     "name": "Plum",
+     "tag_id": "urn:tag:keyword:media:plum",
+     "type": "urn:tag:keyword:media"
+    },
+    {
+     "name": "Stabbed to death",
+     "tag_id": "urn:tag:keyword:media:stabbed_to_death",
+     "type": "urn:tag:keyword:media"
+    },
+    {
+     "name": "Asia",
+     "tag_id": "urn:tag:keyword:media:asia",
+     "type": "urn:tag:keyword:media"
+    }
+   ]
+  },
+  {
+   "name": "Parasite",
+   "entity_id": "6D3EA76D-AD76-4FD5-81AC-275A69D6D8F4",
+   "types": [
+    "urn:entity:artist"
+   ],
+   "properties": {
+    "description": "",
+    "image": {
+     "url": "https://images.qloo.com/i/6D3EA76D-AD76-4FD5-81AC-275A69D6D8F4-420x-auto.jpg"
+    }
+   },
+   "popularity": 0.8462236556672998,
+   "disambiguation": "Parasite",
+   "tags": [
+    {
+     "name": "Heavy Metal",
+     "tag_id": "urn:tag:genre:heavy_metal",
+     "type": "urn:tag:genre",
+     "value": "urn:tag:genre:heavy_metal"
+    },
+    {
+     "name": "Ragga Jungle",
+     "tag_id": "urn:tag:genre:ragga_jungle",
+     "type": "urn:tag:genre",
+     "value": "urn:tag:genre:ragga_jungle"
+    },
+    {
+     "name": "Breakcore",
+     "tag_id": "urn:tag:genre:breakcore",
+     "type": "urn:tag:genre",
+     "value": "urn:tag:genre:breakcore"
+    },
+    {
+     "name": "Raggacore",
+     "tag_id": "urn:tag:genre:raggacore",
+     "type": "urn:tag:genre",
+     "value": "urn:tag:genre:raggacore"
+    }
+   ]
+  },
+  {
+   "name": "Parasyte: The Maxim",
+   "entity_id": "B1020C06-D61C-4F1E-AF82-1B6BB14FAE08",
+   "types": [
+    "urn:entity:tv_show"
+   ],
+   "properties": {
+    "content_rating": "TV-MA",
+    "release_year": 2014,
+    "release_country": "Japan",
+    "release_date": "2016-12-31",
+    "production_company": "Forecast Communications",
+    "description": "Parasyte: The Maxim (released 2016) is an animated action-drama horror-thriller starring Aya Hirano, Nobunaga Shimazaki, and Rinka H.B.B. The story follows a te",
+    "image": {
+     "url": "https://images.qloo.com/i/B1020C06-D61C-4F1E-AF82-1B6BB14FAE08-420x-auto.jpg"
+    }
+   },
+   "popularity": 0.9653613456552091,
+   "disambiguation": "2014,2015",
+   "tags": [
+    {
+     "name": "2d driven action choreography",
+     "tag_id": "urn:tag:style:qloo:2d_driven_action_choreography",
+     "type": "urn:tag:style:qloo"
+    },
+    {
+     "name": "Science fiction",
+     "tag_id": "urn:tag:genre:qloo:science_fiction",
+     "type": "urn:tag:genre:qloo"
+    },
+    {
+     "name": "Drama",
+     "tag_id": "urn:tag:genre:qloo:drama",
+     "type": "urn:tag:genre:qloo"
+    },
+    {
+     "name": "Survival",
+     "tag_id": "urn:tag:keyword:qloo:survival",
+     "type": "urn:tag:keyword:qloo"
+    },
+    {
+     "name": "Metamorphosis",
+     "tag_id": "urn:tag:archetype:qloo:metamorphosis",
+     "type": "urn:tag:archetype:qloo"
+    },
+    {
+     "name": "Animation",
+     "tag_id": "urn:tag:genre:qloo:animation",
+     "type": "urn:tag:genre:qloo"
+    },
+    {
+     "name": "Sci fi",
+     "tag_id": "urn:tag:genre:media:sci_fi",
+     "type": "urn:tag:genre:media"
+    },
+    {
+     "name": "Reflective",
+     "tag_id": "urn:tag:audience:qloo:reflective",
+     "type": "urn:tag:audience:qloo"
+    },
+    {
+     "name": "Symbiotic relationship",
+     "tag_id": "urn:tag:keyword:media:symbiotic_relationship",
+     "type": "urn:tag:keyword:media"
+    },
+    {
+     "name": "Horror",
+     "tag_id": "urn:tag:genre:media:horror",
+     "type": "urn:tag:genre:media"
+    },
+    {
+     "name": "Animation",
+     "tag_id": "urn:tag:genre:media:animation",
+     "type": "urn:tag:genre:media"
+    },
+    {
+     "name": "Coming of age",
+     "tag_id": "urn:tag:theme:qloo:coming_of_age",
+     "type": "urn:tag:theme:qloo"
+    }
+   ]
+  }
+ ]
+}

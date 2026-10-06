@@ -1,0 +1,27 @@
+# Render Blueprint: New > Blueprint, pick this repo. Secrets marked sync:false are asked for in the dashboard.
+services:
+  - type: web
+    name: placecard
+    runtime: python
+    plan: free
+    buildCommand: pip install -r requirements.txt
+    startCommand: python -m placecard.server
+    healthCheckPath: /api/health
+    autoDeploy: true
+    envVars:
+      - key: PYTHON_VERSION
+        value: 3.12.7
+      - key: LLM_PROVIDER
+        value: gemini
+      - key: GEMINI_MODEL
+        value: gemini-3.5-flash
+      - key: QLOO_API_KEY
+        sync: false
+      - key: GEMINI_API_KEY
+        sync: false
+      - key: ANTHROPIC_API_KEY
+        sync: false
+      - key: RUNS_PER_IP_PER_HOUR
+        value: "8"
+      - key: RUNS_PER_DAY
+        value: "120"
